@@ -4,14 +4,84 @@
 }
 
 body {
-    background-color: #f6f8fc;
+    transition: background 2s ;
+}
+
+body.list .content.list{
+    display: block;
+}
+body.list .content.profile{
+    display: block;
+}
+
+body.profile .content.list{
+    display: none;
+}
+body.profile .content.profile{
+    display: block;
+}
+
+header{
+    padding: 1rem;
+    max-width: 992px;
+    margin:0 auto;
+}
+
+header .voltar{
+    background:none;
+    border: none;
+    font-size: 3rem;
 }
 
 .content {
     width: 100vw;
     height: 100vh;
     padding: 1rem;
-    background-color: #fff;
+}
+
+.content h1{
+    margin-top: 0;
+    margin-left: 0.4rem;
+}
+
+.pokeball{
+    position:absolute;
+    right: 0;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #f3f3f3;
+}
+
+.pokeball:before{
+    content:'';
+    position: absolute;
+    background-color:#fff;
+    top: 45%;
+    height: 20px;
+    width: 27%;
+    display: block;
+
+}
+.pokeball:after{
+    content:'';
+    position: absolute;
+    background-color:#fff;
+    top: 45%;
+    right: 0;
+    height: 20px;
+    width: 27%;
+    display: block;
+
+}
+
+.pokeball .button{
+    display: block;
+    width: 50%;
+    height: 50%;
+    border: 20px solid #fff;
+    margin: 25% auto;
+    border-radius: 50%;
 }
 
 @media screen and (min-width: 992px) {

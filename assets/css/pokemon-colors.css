@@ -1,0 +1,233 @@
+/* Normal */
+.normal,
+.normal .pokeball:after,
+.normal .pokeball:before {
+    background-color: #a6a877;
+}
+.normal .pokeball{
+    background-color: #B8B992;
+}
+.normal .pokeball .button{
+    border-color: #a6a877;
+}
+
+/* Grass */
+.grass,
+.grass .pokeball:after,
+.grass .pokeball:before {
+    background-color: #48D0B0;
+}
+.grass .pokeball{
+    background-color: #6DD9C0;
+}
+.grass .pokeball .button{
+    border-color: #48D0B0;
+}
+
+/* fire */
+.fire,
+.fire .pokeball:after,
+.fire .pokeball:before {
+    background-color: #FB6C6C;
+}
+.fire .pokeball{
+    background-color: #FC8989;
+}
+.fire .pokeball .button{
+    border-color: #FB6C6C;
+}
+
+/* Water */
+.water,
+.water .pokeball:after,
+.water .pokeball:before {
+    background-color: #678fee;
+}
+.water .pokeball{
+    background-color: #85A5F1;
+}
+.water .pokeball .button{
+    border-color: #678fee;
+}
+
+/* Electric */
+.electric,
+.electric .pokeball:after,
+.electric .pokeball:before {
+    background-color: #f7cf2e;
+}
+.electric .pokeball{
+    background-color: #F9D958;
+}
+.electric .pokeball .button{
+    border-color: #f7cf2e;
+}
+
+/* Ice */
+.ice,
+.ice .pokeball:after,
+.ice .pokeball:before {
+    background-color: #98d5d7;
+}
+.ice .pokeball{
+    background-color: #ADDDDF;
+}
+.ice .pokeball .button{
+    border-color: #98d5d7;
+}
+
+/* Ground */
+.ground,
+.ground .pokeball:after,
+.ground .pokeball:before {
+    background-color: #dfbf69;
+}
+.ground .pokeball{
+    background-color: #E5CC87;
+}
+.ground .pokeball .button{
+    border-color: #dfbf69;
+}
+
+/* Flying */
+.flying,
+.flying .pokeball:after,
+.flying .pokeball:before {
+    background-color: #a98ff0;
+}
+.flying .pokeball{
+    background-color: #fff;
+}
+.flying .pokeball .button{
+    border-color: #a98ff0;
+}
+
+/* Poison */
+.poison,
+.poison .pokeball:after,
+.poison .pokeball:before {
+    background-color: #a040a0;
+}
+.poison .pokeball{
+    background-color: #B366B3;
+}
+.poison .pokeball .button{
+    border-color: #a040a0;
+}
+
+/* Fighting */
+.fighting,
+.fighting .pokeball:after,
+.fighting .pokeball:before {
+    background-color: #bf3029;
+}
+.fighting .pokeball{
+    background-color: #CC5954;
+}
+.fighting .pokeball .button{
+    border-color: #bf3029;
+}
+
+/* Psychic */
+.psychic,
+.psychic .pokeball:after,
+.psychic .pokeball:before {
+    background-color: #f65687;
+}
+.psychic .pokeball{
+    background-color: #F8789F;
+}
+.psychic .pokeball .button{
+    border-color: #f65687;
+}
+
+/* Dark */
+.dark,
+.dark .pokeball:after,
+.dark .pokeball:before {
+    background-color: #725847;
+}
+.dark .pokeball{
+    background-color: #fff;
+}
+.dark .pokeball .button{
+    border-color: #725847;
+}
+
+/* Rock */
+.rock,
+.rock .pokeball:after,
+.rock .pokeball:before {
+    background-color: #b8a137;
+}
+.rock .pokeball{
+    background-color: #C6B45F;
+}
+.rock .pokeball .button{
+    border-color: #b8a137;
+}
+
+/* Bug */
+.bug,
+.bug .pokeball:after,
+.bug .pokeball:before {
+    background-color: #a8b720;
+}
+.bug .pokeball{
+    background-color: #B9C54D;
+}
+.bug .pokeball .button{
+    border-color: #a8b720;
+}
+
+/* Ghost */
+.ghost,
+.ghost .pokeball:after,
+.ghost .pokeball:before {
+    background-color: #6e5896;
+}
+.ghost .pokeball{
+    background-color: #8B79AB;
+}
+.ghost .pokeball .button{
+    border-color: #6e5896;
+}
+
+/* Steel */
+.steel,
+.steel .pokeball:after,
+.steel .pokeball:before {
+    background-color: #b9b7cf;
+}
+.steel .pokeball{
+    background-color: #fff;
+}
+.steel .pokeball .button{
+    border-color: #b9b7cf;
+}
+
+/* Dragon */
+.dragon,
+.dragon .pokeball:after,
+.dragon .pokeball:before {
+    background-color: #6f38f6;
+}
+.dragon .pokeball{
+    background-color: #8C60F8;
+}
+.dragon .pokeball .button{
+    border-color: #6f38f6;
+}
+
+/* Fairy */
+.fairy,
+.fairy .pokeball:after,
+.fairy .pokeball:before {
+    background-color: #f9aec7;
+}
+.fairy .pokeball{
+    background-color: #FABED2;
+}
+.fairy .pokeball .button{
+    border-color: #f9aec7;
+}
