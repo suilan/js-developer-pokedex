@@ -4,20 +4,10 @@
 }
 
 body {
-    transition: background 2s ;
+    transition: background .5s ;
 }
 
 body.list .content.list{
-    display: block;
-}
-body.list .content.profile{
-    display: block;
-}
-
-body.profile .content.list{
-    display: none;
-}
-body.profile .content.profile{
     display: block;
 }
 
@@ -34,9 +24,8 @@ header .voltar{
 }
 
 .content {
-    width: 100vw;
-    height: 100vh;
     padding: 1rem;
+    box-sizing: border-box;
 }
 
 .content h1{
