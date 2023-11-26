@@ -76,6 +76,7 @@
 .detail img {
     max-width: 100%;
     height: 90px;
+    transition: .5s;
 }
 
 .pagination {
@@ -102,6 +103,15 @@
     right: -50px;
     transform: scale(0.6);
     z-index: 1;
+    transition: .7s;
+}
+
+.pokemon:hover .pokeball{
+    transform: scale(0.9);
+}
+
+.pokemon:hover img{
+    transform: scale(1.2);
 }
 
 @media screen and (min-width: 380px) {

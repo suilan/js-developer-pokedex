@@ -24,7 +24,7 @@ header .voltar{
 }
 
 .content {
-    padding: 1rem;
+    padding: 2rem;
     box-sizing: border-box;
 }
 
@@ -40,6 +40,7 @@ header .voltar{
     height: 200px;
     border-radius: 50%;
     background-color: #f3f3f3;
+    transition: all .5s;
 }
 
 .pokeball:before{

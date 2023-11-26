@@ -42,13 +42,14 @@ function convertPokemonToProfile(pokemon){
     pokeImage.alt = pokemon.name;
 
     document.querySelector('.about-section').innerHTML = buildAboutSection(pokemon);
+    document.querySelector('.stats-section').innerHTML = buildStatsSection(pokemon);
 
 }
 
 function buildAboutSection(pokemon) {
     return `<div class="data">
                 <span class="item capitalize"><label class="title">Species</label> ${pokemon.details.species.name} </span>
-                <span class="item"><label class="title">Height</label>${(pokemon.details.height*10)/2.54} (${pokemon.details.height*10} cm) </span>
+                <span class="item"><label class="title">Height</label>${((pokemon.details.height*10)/2.54).toFixed(2)} (${pokemon.details.height*10} cm) </span>
                 <span class="item"><label class="title">Weight</label> ${pokemon.details.weight} hg </span>
                 <span class="item capitalize"><label class="title">Abilities</label> ${pokemon.details.abilities.map(
                     (ability) => ability.ability.name).join(', ')} </span>
@@ -60,6 +61,19 @@ function buildAboutSection(pokemon) {
                 <span class="item"><label class="title">Egg Cycle</label> ${pokemon.details.species.name} </span>
             </div>
             `;
-    
+}
+
+function buildStatsSection(pokemon) {
+    return `<div class="data">
+                ${pokemon.details.stats.map((stat) => `<div class="item capitalize">
+                    <label class="title">${stat.stat.name}</label>
+                    <span>
+                        ${stat.base_stat}
+                        <div class="bar"><span class="progress-bar"></span></div>
+                    </span>
+                </div>`).join('')}
+                <h3>Type defenses</h3>
+            </div>
+            `;
 }
 

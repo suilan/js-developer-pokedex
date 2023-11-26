@@ -1,5 +1,23 @@
+.profile .pokeball{
+    transform: scale(2) translateY(100px);
+    z-index: -1;
+}
+
 .content.profile{
     display: none;
+}
+
+.content.profile::after{
+    content: '';
+    position:absolute;
+    background-color: white;
+    height: 55vh;
+    width: 100%;
+    border-radius: 30px 30px 0 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+
 }
 
 body.profile .content.list{
@@ -42,15 +60,10 @@ body.profile .content.profile .name{
 }
 
 .content.profile .information{
-    background: white;
-    height: 55vh;
+    height: 35vh;
     margin: 0 auto;
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    max-width: 992px;
     width: 100%;
-    padding: 70px 30px;
-    border-radius: 30px 30px 0 0;
 }
 
 .tabs{
@@ -115,9 +128,26 @@ body.profile .content.profile .name{
 
 .section .item{
     height: 40px;
-    display: block;
+    display: grid;
     line-height: 40px;
-    font-weight: 400;
+    font-weight: 300;
+    grid-template-columns: 1fr 3fr;
+}
+
+.bar{
+    position: relative;
+    width: 90%;
+    background: #F8F9F8;
+    height: 5px;
+    float: right;
+    margin: 15px 0;
+}
+
+.progress-bar{
+    display: block;
+    width: 60%;
+    background: #ff0000;
+    height: 5px;
 }
 
 
