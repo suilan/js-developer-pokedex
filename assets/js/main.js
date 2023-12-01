@@ -1,6 +1,7 @@
-const pokemonList = document.getElementById('pokemonList')
-const loadMoreButton = document.getElementById('loadMoreButton')
-const returnButton = document.getElementById('voltar')
+const pokemonList = document.getElementById('pokemonList');
+const loadMoreButton = document.getElementById('loadMoreButton');
+const returnButton = document.getElementById('voltar');
+const profileTabs = document.getElementsByClassName('tab-link');
 let pokemonCollection = [];
 
 const maxRecords = 151
@@ -18,7 +19,8 @@ function addClickToPokemonLinks(){
         el.addEventListener('click',function(event){
             event.preventDefault();
 
-            let pokemonId = event.target.closest('li').getAttribute('data-id');
+            let pokemonId = event.target.closest('li')
+                .getAttribute('data-id');
 
             let pokemonObj = pokemonCollection[pokemonId-1];
             convertPokemonToProfile(pokemonObj);
@@ -29,10 +31,9 @@ function addClickToPokemonLinks(){
             document.body.classList.add(pokemonObj.type);
 
             // set the return button to return to pokemon list
-            document.getElementById('voltar').setAttribute('data-return','list');
+            document.getElementById('voltar')
+                .setAttribute('data-return','list');
         });
-        
-
     });
 }
 
@@ -50,6 +51,9 @@ function loadPokemonItens(offset, limit) {
 loadPokemonItens(offset, limit)
 
 
+/**
+ * Get more pokemons to the list
+ */
 loadMoreButton.addEventListener('click', () => {
     offset += limit
     const qtdRecordsWithNexPage = offset + limit
@@ -64,6 +68,32 @@ loadMoreButton.addEventListener('click', () => {
     }
 })
 
+/**
+ * When the return pointer is clicked,
+ * return to the listing page
+ */
 returnButton.addEventListener('click',()=>{
     document.body.classList='';
+    document.querySelector('header .pokeball')
+        .className="pokeball";
 });
+
+for (let tabLink of profileTabs) {
+    tabLink.addEventListener('click',(event)=>{
+        event.preventDefault();
+
+        let sectionNameSelected = event.target.dataset.section;
+
+        // check if the clicked tab is already the one selected
+        if(!event.target.classList.contains('selected')){
+            document.querySelector('.section.selected').classList.remove('selected');
+            document.querySelector('.tab-link.selected').classList.remove('selected');
+
+            event.target.classList.add('selected');
+            let selectedSection = document.querySelector('.'+sectionNameSelected+'-section');
+            if(selectedSection){
+                selectedSection.classList.add('selected')
+            }
+        }
+    })
+}

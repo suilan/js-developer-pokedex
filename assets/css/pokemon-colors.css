@@ -1,233 +1,233 @@
 /* Normal */
 .normal,
-.normal .pokeball:after,
-.normal .pokeball:before {
+.pokeball.normal-color:after,
+.pokeball.normal-color:before {
     background-color: #a6a877;
 }
-.normal .pokeball{
+.pokeball.normal-color{
     background-color: #B8B992;
 }
-.normal .pokeball .button{
+.pokeball.normal-color .button{
     border-color: #a6a877;
 }
 
 /* Grass */
 .grass,
-.grass .pokeball:after,
-.grass .pokeball:before {
+.pokeball.grass-color:after,
+.pokeball.grass-color:before {
     background-color: #48D0B0;
 }
-.grass .pokeball{
+.pokeball.grass-color{
     background-color: #6DD9C0;
 }
-.grass .pokeball .button{
+.pokeball.grass-color .button{
     border-color: #48D0B0;
 }
 
 /* fire */
 .fire,
-.fire .pokeball:after,
-.fire .pokeball:before {
+.pokeball.fire-color:after,
+.pokeball.fire-color:before {
     background-color: #FB6C6C;
 }
-.fire .pokeball{
+.pokeball.fire-color{
     background-color: #FC8989;
 }
-.fire .pokeball .button{
+.pokeball.fire-color .button{
     border-color: #FB6C6C;
 }
 
 /* Water */
 .water,
-.water .pokeball:after,
-.water .pokeball:before {
+.pokeball.water-color:after,
+.pokeball.water-color:before {
     background-color: #678fee;
 }
-.water .pokeball{
+.pokeball.water-color{
     background-color: #85A5F1;
 }
-.water .pokeball .button{
+.pokeball.water-color .button{
     border-color: #678fee;
 }
 
 /* Electric */
 .electric,
-.electric .pokeball:after,
-.electric .pokeball:before {
+.pokeball.electric-color:after,
+.pokeball.electric-color:before {
     background-color: #f7cf2e;
 }
-.electric .pokeball{
+.pokeball.electric-color{
     background-color: #F9D958;
 }
-.electric .pokeball .button{
+.pokeball.electric-color .button{
     border-color: #f7cf2e;
 }
 
 /* Ice */
 .ice,
-.ice .pokeball:after,
-.ice .pokeball:before {
+.pokeball.ice-color:after,
+.pokeball.ice-color:before {
     background-color: #98d5d7;
 }
-.ice .pokeball{
+.pokeball.ice-color{
     background-color: #ADDDDF;
 }
-.ice .pokeball .button{
+.pokeball.ice-color .button{
     border-color: #98d5d7;
 }
 
 /* Ground */
 .ground,
-.ground .pokeball:after,
-.ground .pokeball:before {
+.pokeball.ground-color:after,
+.pokeball.ground-color:before {
     background-color: #dfbf69;
 }
-.ground .pokeball{
+.pokeball.ground-color{
     background-color: #E5CC87;
 }
-.ground .pokeball .button{
+.pokeball.ground-color .button{
     border-color: #dfbf69;
 }
 
 /* Flying */
 .flying,
-.flying .pokeball:after,
-.flying .pokeball:before {
+.pokeball.flying-color:after,
+.pokeball.flying-color:before {
     background-color: #a98ff0;
 }
-.flying .pokeball{
+.pokeball.flying-color{
     background-color: #fff;
 }
-.flying .pokeball .button{
+.pokeball.flying-color .button{
     border-color: #a98ff0;
 }
 
 /* Poison */
 .poison,
-.poison .pokeball:after,
-.poison .pokeball:before {
+.pokeball.poison-color:after,
+.pokeball.poison-color:before {
     background-color: #a040a0;
 }
-.poison .pokeball{
+.pokeball.poison-color{
     background-color: #B366B3;
 }
-.poison .pokeball .button{
+.pokeball.poison-color .button{
     border-color: #a040a0;
 }
 
 /* Fighting */
 .fighting,
-.fighting .pokeball:after,
-.fighting .pokeball:before {
+.pokeball.fighting-color:after,
+.pokeball.fighting-color:before {
     background-color: #bf3029;
 }
-.fighting .pokeball{
+.pokeball.fighting-color{
     background-color: #CC5954;
 }
-.fighting .pokeball .button{
+.pokeball.fighting-color .button{
     border-color: #bf3029;
 }
 
 /* Psychic */
 .psychic,
-.psychic .pokeball:after,
-.psychic .pokeball:before {
+.pokeball.psychic-color:after,
+.pokeball.psychic-color:before {
     background-color: #f65687;
 }
-.psychic .pokeball{
+.pokeball.psychic-color{
     background-color: #F8789F;
 }
-.psychic .pokeball .button{
+.pokeball.psychic-color .button{
     border-color: #f65687;
 }
 
 /* Dark */
 .dark,
-.dark .pokeball:after,
-.dark .pokeball:before {
+.pokeball.dark-color:after,
+.pokeball.dark-color:before {
     background-color: #725847;
 }
-.dark .pokeball{
+.pokeball.dark-color{
     background-color: #fff;
 }
-.dark .pokeball .button{
+.pokeball.dark-color .button{
     border-color: #725847;
 }
 
 /* Rock */
 .rock,
-.rock .pokeball:after,
-.rock .pokeball:before {
+.pokeball.rock-color:after,
+.pokeball.rock-color:before {
     background-color: #b8a137;
 }
-.rock .pokeball{
+.pokeball.rock-color{
     background-color: #C6B45F;
 }
-.rock .pokeball .button{
+.pokeball.rock-color .button{
     border-color: #b8a137;
 }
 
 /* Bug */
 .bug,
-.bug .pokeball:after,
-.bug .pokeball:before {
+.pokeball.bug-color:after,
+.pokeball.bug-color:before {
     background-color: #a8b720;
 }
-.bug .pokeball{
+.pokeball.bug-color{
     background-color: #B9C54D;
 }
-.bug .pokeball .button{
+.pokeball.bug-color .button{
     border-color: #a8b720;
 }
 
 /* Ghost */
 .ghost,
-.ghost .pokeball:after,
-.ghost .pokeball:before {
+.pokeball.ghost-color:after,
+.pokeball.ghost-color:before {
     background-color: #6e5896;
 }
-.ghost .pokeball{
+.pokeball.ghost-color{
     background-color: #8B79AB;
 }
-.ghost .pokeball .button{
+.pokeball.ghost-color .button{
     border-color: #6e5896;
 }
 
 /* Steel */
 .steel,
-.steel .pokeball:after,
-.steel .pokeball:before {
+.pokeball.steel-color:after,
+.pokeball.steel-color:before {
     background-color: #b9b7cf;
 }
-.steel .pokeball{
+.pokeball.steel-color{
     background-color: #fff;
 }
-.steel .pokeball .button{
+.pokeball.steel-color .button{
     border-color: #b9b7cf;
 }
 
 /* Dragon */
 .dragon,
-.dragon .pokeball:after,
-.dragon .pokeball:before {
+.pokeball.dragon-color:after,
+.pokeball.dragon-color:before {
     background-color: #6f38f6;
 }
-.dragon .pokeball{
+.pokeball.dragon-color{
     background-color: #8C60F8;
 }
-.dragon .pokeball .button{
+.pokeball.dragon-color .button{
     border-color: #6f38f6;
 }
 
 /* Fairy */
 .fairy,
-.fairy .pokeball:after,
-.fairy .pokeball:before {
+.pokeball.fairy-color:after,
+.pokeball.fairy-color:before {
     background-color: #f9aec7;
 }
-.fairy .pokeball{
+.pokeball.fairy-color{
     background-color: #FABED2;
 }
-.fairy .pokeball .button{
+.pokeball.fairy-color .button{
     border-color: #f9aec7;
 }
