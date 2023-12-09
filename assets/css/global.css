@@ -16,6 +16,20 @@ header{
     padding: 1rem;
     max-width: 992px;
     margin:0 auto;
+    position: relative;
+}
+
+header::before{
+    content: '';
+    position: absolute;
+    border-radius: 30px;
+    left: -100px;
+    top: -64px;
+    height: 200px;
+    width: 200px;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all 1s;
+    z-index: -1;
 }
 
 .voltar{
@@ -40,45 +54,38 @@ header{
     margin-left: 0.4rem;
 }
 
-.pokeball{
-    position:absolute;
-    right: 0;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background-color: #f3f3f3;
-    transition: all ease-out 1s;
+.pagination button {
+    padding: .35rem .75rem;
+    margin: .35rem 0;
+    font-size: .825rem;
+    color: #fff;
+    background-color: #6c79db;
+    border: none;
+    border-radius: 0.5rem;
 }
 
-.pokeball:before{
-    content:'';
+.icon{
+    height: 15px;
+    width: 15px;
+    background-size: contain;
+    display: inline-block;
+    margin-bottom: -1px;
+}
+.heart{
+    height: 30px;
+    width: 30px;
     position: absolute;
-    background-color:#fff;
-    top: 45%;
-    height: 20px;
-    width: 27%;
-    display: block;
-
-}
-.pokeball:after{
-    content:'';
-    position: absolute;
-    background-color:#fff;
-    top: 45%;
-    right: 0;
-    height: 20px;
-    width: 27%;
-    display: block;
-
+    background-image: url('../img/line_heart.svg');
+    background-size: contain;
+    right: 30px;
+    top: 40px;
+    opacity: 0;
+    transition: all 1s;
 }
 
-.pokeball .button{
-    display: block;
-    width: 50%;
-    height: 50%;
-    border: 20px solid #fff;
-    margin: 25% auto;
-    border-radius: 50%;
+p{
+    color: #606060;
+    font-weight: 300;
 }
 
 @media screen and (min-width: 992px) {

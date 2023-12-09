@@ -1,6 +1,6 @@
 
 class Pokemon {
-    number;
+    id;
     name;
     type;
     types = [];
@@ -8,7 +8,7 @@ class Pokemon {
     details;
 
     loadPhoto() {
-        return 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/'+this.number+'.svg';
+        return 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/'+this.id+'.svg';
     }
 }
 

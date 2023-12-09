@@ -1,35 +1,35 @@
 
 const pokeApi = {}
 
+let pokeEvolutions = {};
+
 function convertPokeApiDetailToPokemon(pokeDetail) {
     const pokemon = new Pokemon()
-    pokemon.number = pokeDetail.id
-    pokemon.name = pokeDetail.name
+    pokemon.id = pokeDetail.id;
+    pokemon.name = pokeDetail.name;
 
-    const types = pokeDetail.types.map((typeSlot) => typeSlot.type.name)
-    const [type] = types
+    const types = pokeDetail.types.map((typeSlot) => typeSlot.type.name);
+    const [type] = types;
 
-    pokemon.types = types
-    pokemon.type = type
+    pokemon.types = types;
+    pokemon.type = type;
 
-    pokemon.photo = pokeDetail.sprites.other.dream_world.front_default
+    pokemon.photo = pokeDetail.sprites.other.dream_world.front_default;
     pokemon.details = pokeDetail;
 
-    pokemon.evolutions = pokeApi.getPokemonEvolution(pokemon);
+    pokemon.evolutions = pokeApi.getPokemonSpecies(pokemon);
 
     return pokemon
 }
 
 function convertEvolutionsToObjectFormat(evolution) {
 
-    let response;
-    let minLevel = evolution.evolution_details[0].min_level;
     let evolutionsArray = [];
 
     let pokemon = new Pokemon()
     pokemon.min_level = evolution.evolution_details[0].min_level;
     pokemon.name = evolution.species.name;
-    pokemon.number = evolution.species.url.match(/\/([0-9]+)\//)[1];
+    pokemon.id = evolution.species.url.match(/\/([0-9]+)\//)[1];
 
     evolutionsArray.push(pokemon);
 
@@ -46,14 +46,40 @@ pokeApi.getPokemonDetail = (pokemon) => {
         .then(convertPokeApiDetailToPokemon)
 }
 
-pokeApi.getPokemonEvolution = (pokemon) => {
-    const url = `https://pokeapi.co/api/v2/evolution-chain/${pokemon.number}/`;
+pokeApi.getPokemonSpecies = (pokemon) => {
+    const url = `https://pokeapi.co/api/v2/pokemon-species/${pokemon.id}/`;
+
+    return fetch(url)
+        .then((response) => response.json())
+        .then((species)=>{
+            pokemon.species = {};
+            pokemon.species.gender_rate = species.gender_rate;
+            pokemon.species.egg_groups = species.egg_groups;
+            pokemon.species.hatch_counter = species.hatch_counter;
+            pokeApi.getPokemonEvolution(pokemon, species.evolution_chain);
+        })
+}
+
+pokeApi.getPokemonEvolution = (pokemon, evolution_chain) => {
+    const url = evolution_chain.url;
 
     return fetch(url)
         .then((response) => response.json())
         .then((evolutions)=>{
-            console.log(evolutions)
-            pokemon.evolutions = convertEvolutionsToObjectFormat(evolutions.chain.evolves_to[0]);
+            let pokeEvolution = [];
+
+            // Creates the first step evolution
+            let newPokemon = new Pokemon()
+            newPokemon.min_level = 0;
+            newPokemon.name = evolutions.chain.species.name;
+            newPokemon.id = evolutions.chain.species.url.match(/\/([0-9]+)\//)[1];
+
+            // Build array of evolution
+            pokeEvolution = convertEvolutionsToObjectFormat(evolutions.chain.evolves_to[0]);
+            pokeEvolution.unshift(newPokemon);
+
+            pokemon.evolutions = pokeEvolution;
+
         })
 }
 

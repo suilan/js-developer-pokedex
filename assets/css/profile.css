@@ -26,6 +26,10 @@ body.profile .content.profile{
     display: block;
 }
 
+body.profile header::before{
+    transform: rotate(64deg);
+}
+
 body.profile #voltar{
     color: white;
 }
@@ -33,11 +37,39 @@ body.profile #voltar{
 body.profile .content.profile .name{
     color: white;
     text-transform: capitalize;
-    margin-bottom: 10px;
+    margin: 0 0 10px 0;
+    font-size: 50px;
+    display: inline-block;
+}
+
+.profile_number{
+    float: right;
+    position: relative;
+    margin: 25px 0 0;
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+body.profile .heart{
+    opacity: 1;
 }
 
 .content.profile .detail{
     flex-direction: column;
+}
+
+.content.profile .detail::before{
+    content: '';
+    background-image: url('../img/circulo-branco.png');
+    width: 100px;
+    height: 55px;
+    position: absolute;
+    left: 30%;
+    top:30%;
+    background-size: 20%;
+    background-repeat: repeat;
+    opacity: .4;
 }
 
 .content.profile .detail .types{
@@ -104,6 +136,13 @@ body.profile .content.profile .name{
 .tab-link:hover{
     color: hsl(0, 0%, 18%);
 }
+
+.sections{
+    overflow-y: scroll;
+    height: 41vh;
+    overflow-x: clip;
+}
+
 .section{
     display: none;
 }
@@ -122,7 +161,7 @@ body.profile .content.profile .name{
     display: block;
 }
 
-.item.capitalize{
+.capitalize{
     text-transform: capitalize;
 }
 
@@ -203,4 +242,13 @@ body.profile .content.profile .name{
     font-size:50px;
     color: lightgray;
 }
+
+.male-icon{
+    background-image: url('../img/gender-male-icon.webp');
+}
+.female-icon{
+    background-image: url('../img/gender-female-icon.webp');
+    margin-left: 10px;
+}
+
 

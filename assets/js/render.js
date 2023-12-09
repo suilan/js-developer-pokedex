@@ -5,10 +5,10 @@
  */
 function convertPokemontoCard(pokemon) {
     return `
-        <li class="pokemon ${pokemon.type}" data-id="${pokemon.number}">
+        <li class="pokemon ${pokemon.type}" data-id="${pokemon.id}">
             <span class="pokeball ${pokemon.type}-color"><em class="button"></em></span>
             <a href="#" class="link no-event">
-                <span class="number">#${('000'+pokemon.number).slice(-3)}</span>
+                <span class="number">#${('000'+pokemon.id).slice(-3)}</span>
                 <span class="name">${pokemon.name}</span>
 
                 <div class="detail">
@@ -51,14 +51,25 @@ function buildAboutSection(pokemon) {
                 <span class="item capitalize"><label class="title">Species</label> ${pokemon.details.species.name} </span>
                 <span class="item"><label class="title">Height</label>${((pokemon.details.height*10)/2.54).toFixed(2)} (${pokemon.details.height*10} cm) </span>
                 <span class="item"><label class="title">Weight</label> ${pokemon.details.weight} hg </span>
-                <span class="item capitalize"><label class="title">Abilities</label> ${pokemon.details.abilities.map(
-                    (ability) => ability.ability.name).join(', ')} </span>
+                <span class="item capitalize">
+                    <label class="title">Abilities</label> 
+                    ${pokemon.details.abilities.map((ability) => ability.ability.name).join(', ')} 
+                </span>
             </div>
             <div class="data">
                 <h3>Breeding</h3>
-                <span class="item"><label class="title">Gender</label> ${pokemon.details.species.name} </span>
-                <span class="item"><label class="title">Egg Groups</label> ${pokemon.details.species.name} </span>
-                <span class="item"><label class="title">Egg Cycle</label> ${pokemon.details.species.name} </span>
+                <div class="item">
+                    <label class="title">Gender</label> 
+                    <div>
+                        <i class="icon male-icon"></i> ${(pokemon.species.gender_rate/8)*100}% 
+                        <i class="icon female-icon"></i> ${((7-pokemon.species.gender_rate)/8)*100}%
+                    </div>
+                </div>
+                <span class="item capitalize">
+                    <label class="title">Egg Groups</label> 
+                    ${pokemon.species.egg_groups.map((group) => group.name).join(', ')} 
+                </span>
+                <span class="item"><label class="title">Egg Cycle</label> ${pokemon.species.hatch_counter} steps </span>
             </div>
             `;
 }
@@ -72,44 +83,48 @@ function buildStatsSection(pokemon) {
                         <div class="bar"><span class="progress-bar ${stat.base_stat>50?'green':''}" style="width:${stat.base_stat}%;"></span></div>
                     </span>
                 </div>`).join('')}
+            </div>
+            <div class="data">
                 <h3>Type defenses</h3>
+                <p>The effectiveness of each type on <b class="capitalize">${pokemon.name}</b>.</p>
             </div>
             `;
 }
 
 function buildEvolutionsSection(pokemon) {
-    console.log(pokemon);
-    return `<div class="data">
-                <h3>Evolution Chain</h3>
-                <div class="evolution">
-                    <div class="evolution-stage">
-                        <span class="pokeball"><em class="button"></em></span>
-                        <div class="preview">
-                            <img src="${pokemon.loadPhoto()}">
-                            <label class="title">${pokemon.name}</label>
-                        </div>
-                    </div>
-                    <div class="level">
-                        <span class="arrow">→</span><br>
-                        <span>Lvl ${pokemon.evolutions[0].min_level}</span>
-                    </div>
-                    <div class="evolution-stage">
-                        <span class="pokeball"><em class="button"></em></span>
-                        <div class="preview">
-                            <img src="${pokemon.evolutions[0].loadPhoto()}">
-                            <label class="title">${pokemon.evolutions[0].name}</label>
-                        </div>
+    let response = '';
+
+    if(pokemon.evolutions.length>1){
+        
+        for (let index = 1; index < pokemon.evolutions.length; index++) {
+            const current = pokemon.evolutions[index];
+            const previous = pokemon.evolutions[index-1];
+            response += `<div class="evolution">
+                <div class="evolution-stage">
+                    <span class="pokeball"><em class="button"></em></span>
+                    <div class="preview">
+                        <img src="${previous.loadPhoto()}">
+                        <label class="title">${previous.name}</label>
                     </div>
                 </div>
-                ${pokemon.evolutions.map((evo) => `<div class="item">
-                    <div class="title">
-                        <img>
-                        <label class="title">${evo.name}</label>
+                <div class="level">
+                    <span class="arrow">→</span><br>
+                    <span>Lvl ${current.min_level}</span>
+                </div>
+                <div class="evolution-stage">
+                    <span class="pokeball"><em class="button"></em></span>
+                    <div class="preview">
+                        <img src="${current.loadPhoto()}">
+                        <label class="title">${current.name}</label>
                     </div>
-                    <span>
-                        ${evo.min_level}
-                    </span>
-                </div>`).join('')}
-            </div>
-            `;
+                </div>
+            </div>`;
+        }
+        
+        }
+        else{
+            response = '<div class="evolution">No evolution available</div>';
+        }
+
+    return response;
 }

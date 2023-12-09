@@ -1,0 +1,40 @@
+.pokeball{
+    position:absolute;
+    right: 0;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #f3f3f3;
+    transition: all ease-out 1s;
+}
+
+.pokeball:before{
+    content:'';
+    position: absolute;
+    background-color:#fff;
+    top: 45%;
+    height: 20px;
+    width: 27%;
+    display: block;
+
+}
+.pokeball:after{
+    content:'';
+    position: absolute;
+    background-color:#fff;
+    top: 45%;
+    right: 0;
+    height: 20px;
+    width: 27%;
+    display: block;
+
+}
+
+.pokeball .button{
+    display: block;
+    width: 50%;
+    height: 50%;
+    border: 20px solid #fff;
+    margin: 25% auto;
+    border-radius: 50%;
+}
