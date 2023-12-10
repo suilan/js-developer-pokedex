@@ -51,6 +51,5 @@ Os arquivos JS foram organizados em 4:
 - Seção Listagem - Desenvolver o Menu Hamburguer
 - Seção Listagem - Ao clicar no botão Load more, os eventos de abrir Perfil são perdidos em todos os cards.
 - Seção Perfil - Adicionar conteudo a tab Moves.
-- 
 
 
