@@ -12,5 +12,45 @@ Foi utilizada como base para este desenvolvimento:
 ## Desenvolvimento
 Considerando o exercício para a prática de HTML, CSS e Javascritp, não foi utilizado nenhum framework ou pre-processador.
 
-### HTML
-No documento foi acrescentado a seção Profile, onde foi desenvolvido o layout do página. 
+### Na página
+No documento foi acrescentado a seção Profile, onde foi desenvolvido a segunda tela, foco deste trabalho. 
+Os pontos de atenção foram: 
+- Aplicação das tags corretas(cabeçalhos, seções, links, etc.);
+- Separação dos conteúdos na página.
+
+Na pagina também foram acrescentados um favicon, pequenas animações e interações como:
+- O **hover dos cards** na seção de listagem, 
+- A **transição** da seção Listagem para a Seção Perfil; e 
+- A **interação** das tabs na seção Perfil.
+
+Também acrescentamos um componente chamado pokeball, que foi desenvolvido totalmente em CSS+HTML para ser utilzado na página como recurso visual da interface.
+
+### No CSS
+No desenvolvimento do CSS, os arquivos foram reorganizados em 5 documento e importados em main.css, para organização da importação.
+Os documentos css foram organizados em:
+- **Cores**: O mundo pokemon possui uma grande variedade de pokemons com  diferentes tipos e cores, o que acabaou gerando a necessidade de um mapeamento de cores;
+- **Globais**: Arquivo voltados para configurações gerais que devem ser utilizadas como guideline para toda a interface;
+- **Home**: todos os elementos necessários especificamente a seção de listagem;
+- **Profile**: todos os elementos necessários especificamente a seção de Perfil;
+- **Pokeball**: arquivo onde foi organizado todos as propriedades do componente pokeball desenvolvido.
+
+
+### No JS
+Os arquivos JS foram organizados em 4: 
+- **main.js**: responsável pelos comportamentos e eventos gerais da página;
+- **poke-api.js**: responsável pelas chamadas a PokeAPI;
+- **pokemon-model.js**: onde foi configurado o model pokemon;
+- **render.js**: responsável pela conversão dos dados em estruturas visuais e componentes da página.
+
+
+### Principais desafios
+- A API Pokemon definitivamente foi um desafio. Nem todos os dados estão organizados da forma como a interface se apresenta. Também a documentação, embora bem detalhada, ainda possui alguns pontos de que precisam de maior esclarecimento. Ex: No endpoint de evolution-chain não explica qual id que deve ser usado na chamda: do pokemon ou da evolução.
+- Nem todos os assets não estavam disponíveis, foi necessário procurar online ou produzir alguns deles. Ex: coração de like no profile.
+
+### Para finalizar
+- Seção Listagem - Desenvolver o Menu Hamburguer
+- Seção Listagem - Ao clicar no botão Load more, os eventos de abrir Perfil são perdidos em todos os cards.
+- Seção Perfil - Adicionar conteudo a tab Moves.
+- 
+
+
