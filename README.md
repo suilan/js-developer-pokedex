@@ -9,6 +9,19 @@ Foi utilizada como base para este desenvolvimento:
 
 ![Pokedex Interface](https://cdn.dribbble.com/users/1171520/screenshots/6540871/pokedex2.png)
 
+## Instalação
+Para que esse projeto rode, é necessário instalar as seguintes dependencias:
+- Node.js
+- Http-server (Global)
+
+Para instruções de instalação do Node.js, seguir as instruções disponíveis nestes sites: 
+- https://nodejs.org/en/download 
+- https://nodejs.org/en/download/package-manager
+
+Para instalação e uso do http-server, seguir instruções descritas aqui: https://www.npmjs.com/package/http-server. Para este projeto utilizamos a instalação global.
+
+Uma vez com as bibliotecas instaladas, basta rodar **http-server .** no diretório raiz do projeto.
+
 ## Desenvolvimento
 Considerando o exercício para a prática de HTML, CSS e Javascritp, não foi utilizado nenhum framework ou pre-processador.
 
