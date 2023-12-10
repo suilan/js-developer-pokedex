@@ -2,6 +2,7 @@ const pokemonList = document.getElementById('pokemonList');
 const loadMoreButton = document.getElementById('loadMoreButton');
 const returnButton = document.getElementById('voltar');
 const profileTabs = document.getElementsByClassName('tab-link');
+const heartElement = document.getElementsByClassName('heart')[0];
 let pokemonCollection = [];
 
 const maxRecords = 151
@@ -97,3 +98,10 @@ for (let tabLink of profileTabs) {
         }
     })
 }
+
+document.querySelector('.heart').addEventListener('click',function (event) {
+    event.preventDefault();
+
+    event.target.classList.toggle("is-active");
+    
+});
