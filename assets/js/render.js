@@ -33,6 +33,7 @@ function convertPokemonToProfile(pokemon){
     // Load Initial data
     document.querySelector('header .pokeball').classList.add(pokemon.type+'-color');
     document.querySelector('.profile .name').innerText = pokemon.name;
+    document.querySelector('.profile_number').innerText = "#"+(('000'+pokemon.id).slice(-3))
     document.querySelector('.profile .detail .types').innerHTML = pokemon.types.map(
         (type) => `<li class="type">${type}</li>`).join('');
 
